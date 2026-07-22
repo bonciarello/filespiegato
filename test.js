@@ -51,8 +51,8 @@ test('<link rel="canonical"> presente', () => {
   if (!/<link[^>]*rel="canonical"/.test(html)) throw new Error('canonical mancante');
 });
 
-test('URL canonico punta a cristianporco.it/app/filespiegato/', () => {
-  if (!html.includes('cristianporco.it/app/filespiegato/')) throw new Error('URL canonico errato');
+test('URL canonico punta a github.com/bonciarello/filespiegato/', () => {
+  if (!html.includes('github.com/bonciarello/filespiegato/')) throw new Error('URL canonico errato');
 });
 
 test('Open Graph tags presenti', () => {
@@ -180,7 +180,7 @@ test('sitemap.xml esiste', () => {
 
 test('sitemap.xml contiene URL canonico', () => {
   const s = fs.readFileSync(path.join(BASE, 'sitemap.xml'), 'utf-8');
-  if (!s.includes('cristianporco.it/app/filespiegato/')) throw new Error('URL canonico errato in sitemap');
+  if (!s.includes('github.com/bonciarello/filespiegato/')) throw new Error('URL canonico errato in sitemap');
 });
 
 console.log('\nCSS / Design');
